@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCT 127 | Фан-сайт</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Общие стили */
+        body {
+            font-family: 'Roboto Condensed', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Шапка с градиентом */
+        header {
+            background: linear-gradient(to right, #4CAF50, #2E8B57);
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+        
+        /* Навигация */
+        nav {
+            background-color: #2E8B57;
+            padding: 1.2rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.2rem;
+            font-weight: bold;
+            padding: 0.5rem 0;
+            font-size: 1.1rem;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid transparent;
+        }
+        
+        nav a:hover {
+            border-bottom: 2px solid white;
+        }
+        
+        /* Основной контент */
+        .container {
+            max-width: 1000px;
+            margin: 2.5rem auto;
+            padding: 0 1.5rem;
+        }
+        
+        section {
+            margin-bottom: 3.5rem;
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+        
+        h2 {
+            color: #2E8B57;
+            font-size: 2.2rem;
+            margin-bottom: 1.8rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #4CAF50;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Карточки участников */
+        .members {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8rem;
+            justify-content: center;
+        }
+        
+        .member-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 190px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .member-img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            border-bottom: 3px solid #4CAF50;
+        }
+        
+        .member-info {
+            padding: 1.2rem;
+        }
+        
+        .member-name {
+            font-weight: bold;
+            color: #2E8B57;
+            margin: 0.6rem 0;
+            font-size: 1.2rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        /* Альбомы */
+        .album {
+            background: white;
+            border-left: 4px solid #4CAF50;
+            padding: 1.2rem;
+            margin-bottom: 1.2rem;
+            border-radius: 0 6px 6px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .album-title {
+            font-weight: bold;
+            color: #2E8B57;
+            margin-bottom: 0.4rem;
+            font-size: 1.3rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+        }
+        
+        .gallery-item {
+            width: calc(33.333% - 1.2rem);
+            height: 180px;
+            overflow: hidden;
+            border-radius: 6px;
+            border: 2px solid #e0e0e0;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Подвал */
+        footer {
+            background-color: #2E8B57;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        footer p {
+            font-size: 1rem;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Подвал */
+        footer {
+            background-color: #2E8B57;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        footer p {
+            font-size: 1rem;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 0.5px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            nav a {
+                margin: 0 0.8rem;
+                font-size: 1rem;
+            }
+            
+            .member-card {
+                width: 160px;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>NCT 127</h1>
+        <p class="subtitle">Neo Culture Technology — Seoul Based Unit</p>
+    </header>
+    
+    <nav>
+        <a href="#about">О группе</a>
+        <a href="#members">Участники</a>
+        <a href="#albums">Альбомы</a>
+        <a href="#gallery">Фото</a>
+    </nav>
+    
+    <div class="container">
+        <section id="about">
+            <h2>О группе</h2>
+            <p>NCT 127 — южнокорейский бой-бэнд, часть проекта NCT от SM Entertainment. Группа дебютировала 7 июля 2016 года. Название "127" отражает долготу Сеула, подчёркивая связь группы с корейской столицей.</p>
+            <p>NCT 127 известны своим уникальным нео-культурным концептом, сочетающим элементы хип-хопа, R&B и электронной музыки. Группа завоевала популярность благодаря мощным выступлениям и инновационному музыкальному стилю.</p>
+        </section>
+        
+        <section id="members">
+            <h2>Участники</h2>
+            <div class="members">
+                <div class="member-card">
+                    <img src="/img/NCT_127_Taeyong_Walk_concept_photo_1.jpeg" alt="" class="member-img">
+                    <div class="member-info">
+                        <div class="member-name">Taeyong</div>
+                        <div>Лидер, главный рэпер</div>
+                    </div>
+                </div>
+                
+                <div class="member-card">
+                    <img src="/img/NCT_127_Johnny_Walk_concept_photo_3.jpeg" alt="Johnny" class="member-img">
+                    <div class="member-info">
+                        <div class="member-name">Johnny</div>
+                        <div>Танцор, вокалист</div>
+                    </div>
+                </div>
+                
+                <div class="member-card">
+                    <img src="/img/Mark_The_Firstfruit_concept_photo_79.jpeg" alt="Mark" class="member-img">
+                    <div class="member-info">
+                        <div class="member-name">Mark</div>
+                        <div>Главный рэпер</div>
+                    </div>
+                </div>
+                
+                <div class="member-card">
+                    <img src="/img/NCT_DOJAEJUNG_Jaehyun_Perfume_concept_photo_1.jpeg" alt="Jaehyun" class="member-img">
+                    <div class="member-info">
+                        <div class="member-name">Jaehyun</div>
+                        <div>Главный вокалист</div>
+                    </div>
+                </div>
+                
+                <div class="member-card">
+                    <img src="/img/NCT_127_Haechan_White_Lie_concept_photo_3.jpeg" alt="Haechan" class="member-img">
+                    <div class="member-info">
+                        <div class="member-name">Haechan</div>
+                        <div>Главный вокалист</div>
+                    </div>
+                </div>
+                
+                <div class="member-card">
+                    <img src="/img/NCT_127_Doyoung_Walk_concept_photo_13.jpeg" alt="Doyoung" class="member-img">
+                    <div class="member-info">
+                        <div class="member-name">Doyoung</div>
+                        <div>Вокалист</div>
+                    </div>
+                </div>
+                
+                <div class="member-card">
+                    <img src="/img/NCT_127_Jungwoo_Walk_concept_photo_3.jpeg" alt="Jungwoo" class="member-img">
+                    <div class="member-info">
+                        <div class="member-name">Jungwoo</div>
+                        <div>Вокалист</div>
+                    </div>
+                </div>
+                
+                <div class="member-card">
+                    <img src="/img/NCT_127_Yuta_Japan_Official_Book_Vol.11.jpeg" alt="Yuta" class="member-img">
+                    <div class="member-info">
+                        <div class="member-name">Yuta</div>
+                        <div>Танцор, вокалист</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="albums">
+            <h2>Популярные альбомы</h2>
+            <div class="album">
+                <div class="album-title">Sticker (2021)</div>
+                <p>3-й студийный альбом, включает хиты "Sticker" и "Lemonade". Альбом установил рекорды продаж и занял высокие позиции в чартах.</p>
+            </div>
+            
+            <div class="album">
+                <div class="album-title">Neo Zone (2020)</div>
+                <p>2-й студийный альбом с главным синглом "Kick It". Альбом получил платиновую сертификацию в Корее.</p>
+            </div>
+            
+            <div class="album">
+                <div class="album-title">Regular-Irregular (2018)</div>
+                <p>Дебютный студийный альбом с треком "Simon Says". Знакомит с уникальным стилем группы.</p>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h2>Фото</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="/img/выступление.jpg" alt="">
+                </div>
+                <div class="gallery-item">
+                    <img src="/img/NCT_127_Walk_group_concept_photo_13.jpeg" alt="">
+                </div>
+                <div class="gallery-item">
+                    <img src="/img/file.jpg" alt="">
+                </div>
+                <div class="gallery-item">
+                    <img src="/img/8c8b2ded8d0c9cd51c254e9f577d9ebd.jpg" alt="">
+                </div>
+                <div class="gallery-item">
+                    <img src="/img/trio.jpeg" alt="">
+                </div>
+                <div class="gallery-item">
+                    <img src="/img/173066437ac1aae989683568d714c956.jpg" alt="">
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>NCT 127</p>
+    </footer>
+</body>
+</html>
